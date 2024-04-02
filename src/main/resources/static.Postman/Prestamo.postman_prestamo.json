@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "33c8eddb-d240-45db-94cb-7835a9fb5a11",
+		"name": "Prestamo_Prestamos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33964574"
+	},
+	"item": [
+		{
+			"name": "Prestamos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"loanId\": null,\r\n\r\n    \"cliente\": {\r\n\r\n        \"clientId\": 5\r\n\r\n    },\r\n\r\n    \"monto\": 20000.00,\r\n\r\n    \"tasaInteres\": 2.5,\r\n\r\n    \"plazo\": 24,\r\n\r\n    \"fechaInicio\": \"2024-04-01\",\r\n\r\n    \"estado\": \"Activo\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/prestamos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prestamos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prestamos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/prestamos/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prestamos",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prestamos",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clientId\": 4,\r\n    \"nombre\": \"Jenn\",\r\n    \"apellido\": \"Velasco\",\r\n    \"direccion\": \"Calle Principal 123\",\r\n    \"telefono\": \"1234567890\",\r\n    \"email\": \"jenn@example.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/prestamos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prestamos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Prestamos",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/prestamos/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prestamos",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

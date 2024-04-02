@@ -1,0 +1,20 @@
+-- Crear tabla "Clientes"
+CREATE TABLE Clientes (
+    client_id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100),
+    apellido VARCHAR(100),
+    direccion VARCHAR(255),
+    telefono VARCHAR(20),
+    email VARCHAR(100)
+);
+
+-- Crear tabla "Prestamos"
+CREATE TABLE Prestamos (
+    loan_id SERIAL PRIMARY KEY,
+    client_id INTEGER REFERENCES Clientes(client_id),
+    monto DECIMAL(15, 2),
+    tasa_interes DECIMAL(5, 2),
+    plazo INTEGER,
+    fecha_inicio DATE,
+    estado VARCHAR(50)
+);
